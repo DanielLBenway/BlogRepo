@@ -1,2 +1,2 @@
 # BlogRepo
- a repo for items on my blog
+ - a repo for items on my blog
