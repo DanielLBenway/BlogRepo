@@ -31,17 +31,17 @@
 # 2021.05.20.1601 - changed Cloudfare to Cloudflare
 #                 - changed icon to be numeric/symbolic
 #                 - changed outfile file header to indicate G or Cf in column headers
+# 2021.06.24.0703 - edited script comments for accuracy and clarity
 ############################################################################################################################################################################
 # This script PINGs Google and Cloudflare with very small amounts of data on a set interval for a chosen duration, so you can amass failure info to give to your ISP.
 # The output files are put in c:\temp: 
 #   the 'full' file contains all results
-#   the 'ISPProof' file contains only proof of failure (to give to your ISP)
+#   the 'ISPProof' file contains only proof of failures (to give to your ISP)
 # If this script cannot PING your home router with no latency, it won't bothter PINGing the remote addresses, and it won't put the failure into the 'ISPProof' file.
-# This script will chirp if there is trouble with your home router, and will sound a long tone if there are connectivity problems or latency beyond your home router, 
-# both while saving all results to the 'full' file.
+# This script will sound various tones to indicate the severity of connectivity/latency problems as described in the test case matrix below.
 # Prereqs:
-#   your home router is 192.168.1.1 (if not, edit this script)
-#   you're running this script in VS Code, using PSh 7 or higher (CLI PSh 7 or higher should work too)
+#   your home router is 192.168.1.1 (if not, edit the user customized variables section of this script)
+#   you're running this script in PSh 7 or higher
 ############################################################################################################################################################################
 # Case martrix:
 # ------------------------------------------------------
